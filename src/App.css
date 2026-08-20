@@ -33,46 +33,49 @@ body {
   background: var(--bg-1);
   min-height: 100vh;
   color: var(--c-1);
+  font-size: 16px;
 }
 
 .app { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 
-.home { text-align: center; }
+.home { text-align: center; width: 100%; padding: 20px; }
 
 .home-card {
   background: var(--bg-2);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 60px 50px;
-  min-width: 400px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 80px 60px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
 .home-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: var(--blue);
-  border-radius: 16px;
-  margin-bottom: 24px;
+  border-radius: 22px;
+  margin-bottom: 32px;
   color: white;
 }
 
-.home-card h1 { font-size: 1.8rem; font-weight: 600; margin-bottom: 8px; color: var(--white); }
-.home-card p { color: var(--c-2); margin-bottom: 40px; font-size: 0.95rem; }
-.home-buttons { display: flex; flex-direction: column; gap: 12px; }
+.home-card h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 12px; color: var(--white); }
+.home-card p { color: var(--c-2); margin-bottom: 48px; font-size: 1.15rem; }
+.home-buttons { display: flex; flex-direction: column; gap: 16px; }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
+  gap: 10px;
+  padding: 16px 32px;
   border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 0.9rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
@@ -88,7 +91,7 @@ body {
 .btn-add { background: var(--bg-3); color: var(--c-1); }
 .btn-add:hover { background: var(--bg-hover); }
 
-.btn-add-sm { background: var(--blue); border-color: var(--blue); color: white; padding: 8px 16px; font-size: 0.85rem; }
+.btn-add-sm { background: var(--blue); border-color: var(--blue); color: white; padding: 12px 24px; font-size: 1rem; border-radius: 8px; }
 
 .btn-back {
   display: inline-flex;
@@ -97,10 +100,10 @@ body {
   background: none;
   border: none;
   color: var(--c-2);
-  padding: 6px 10px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -113,10 +116,10 @@ body {
   background: none;
   border: 1px solid var(--border);
   color: var(--c-2);
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -129,10 +132,10 @@ body {
   background: var(--blue);
   border: none;
   color: white;
-  padding: 6px 14px;
-  border-radius: 4px;
+  padding: 8px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: inherit;
   transition: background 0.15s;
 }
@@ -141,7 +144,6 @@ body {
 .btn-save:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .add-page { width: 100%; height: 100vh; display: flex; flex-direction: column; }
-
 .editor-container { display: flex; flex-direction: column; height: 100vh; background: var(--bg-1); }
 
 .editor-topbar {
@@ -150,26 +152,25 @@ body {
   gap: 12px;
   background: var(--bg-2);
   border-bottom: 1px solid var(--border);
-  padding: 0 12px;
-  height: 40px;
+  padding: 0 16px;
+  height: 48px;
   flex-shrink: 0;
 }
 
 .editor-tab {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 0 12px;
+  gap: 8px;
+  padding: 0 16px;
   height: 100%;
   background: var(--bg-1);
   border-top: 2px solid var(--blue);
   border-right: 1px solid var(--border);
   color: var(--c-1);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .editor-actions { margin-left: auto; }
-
 .editor-body { display: flex; flex: 1; overflow: hidden; }
 
 .line-numbers {
@@ -188,7 +189,7 @@ body {
   line-height: 22px;
   padding-right: 12px;
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--c-3);
 }
 
@@ -200,8 +201,8 @@ body {
   border-bottom: 1px solid var(--border);
   color: var(--white);
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
-  font-size: 13px;
-  padding: 10px 16px;
+  font-size: 14px;
+  padding: 12px 16px;
   outline: none;
   flex-shrink: 0;
 }
@@ -214,7 +215,7 @@ body {
   border: none;
   color: var(--white);
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 22px;
   padding: 12px 16px;
   resize: none;
@@ -231,9 +232,9 @@ body {
   gap: 16px;
   background: var(--blue);
   color: white;
-  padding: 0 12px;
-  height: 24px;
-  font-size: 0.75rem;
+  padding: 0 16px;
+  height: 28px;
+  font-size: 0.85rem;
   flex-shrink: 0;
 }
 
@@ -247,30 +248,29 @@ body {
   gap: 12px;
   background: var(--bg-2);
   border-bottom: 1px solid var(--border);
-  padding: 0 16px;
-  height: 44px;
+  padding: 0 20px;
+  height: 52px;
   flex-shrink: 0;
 }
 
 .view-title, .admin-title {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex: 1;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--c-1);
 }
 
 .admin-title svg { color: var(--red); }
-
-.admin-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.admin-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
 
 .code-count {
   background: var(--blue);
   color: white;
-  font-size: 0.7rem;
-  padding: 2px 7px;
-  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 12px;
   font-weight: 600;
 }
 
@@ -284,38 +284,39 @@ body {
   color: var(--c-3);
 }
 
-.loading-box span, .empty-box p { font-size: 0.95rem; }
+.loading-box span, .empty-box p { font-size: 1.1rem; }
 
 .spin { animation: spin 1s linear infinite; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-.auth-page { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-1); }
+.auth-page { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-1); padding: 20px; }
 
 .auth-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   background: var(--bg-2);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 40px 36px;
-  min-width: 300px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
 
 .auth-box svg { color: var(--c-3); }
-.auth-box h2 { font-size: 1.1rem; font-weight: 600; color: var(--c-1); margin: 0; }
-.auth-box p { font-size: 0.8rem; color: var(--c-3); margin: 0; }
+.auth-box h2 { font-size: 1.3rem; font-weight: 600; color: var(--c-1); margin: 0; }
+.auth-box p { font-size: 0.9rem; color: var(--c-3); margin: 0; }
 
 .auth-input {
   width: 100%;
-  padding: 10px 14px;
-  border-radius: 4px;
+  padding: 14px 16px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-1);
   color: var(--c-1);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
@@ -325,16 +326,16 @@ body {
 .auth-input.auth-error { border-color: var(--red); animation: shake 0.3s; }
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
-.auth-error-text { font-size: 0.78rem; color: var(--red); }
+.auth-error-text { font-size: 0.85rem; color: var(--red); }
 
 .auth-btn {
   width: 100%;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 14px;
+  border-radius: 8px;
   border: none;
   background: var(--blue);
   color: white;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.15s;
@@ -350,10 +351,10 @@ body {
   background: rgba(244,71,71,0.15);
   border: 1px solid var(--red);
   color: var(--red);
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: inherit;
   transition: background 0.15s;
 }
@@ -361,32 +362,34 @@ body {
 .btn-delete-all:hover { background: rgba(244,71,71,0.3); }
 .btn-delete-all:disabled { opacity: 0.4; cursor: not-allowed; }
 
-.admin-list { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.admin-list { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
 
-.admin-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.admin-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
 
 .admin-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
+  padding: 14px 18px;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.admin-card-info { display: flex; align-items: center; gap: 8px; color: var(--c-1); font-size: 0.85rem; }
+.admin-card-info { display: flex; align-items: center; gap: 10px; color: var(--c-1); font-size: 1rem; }
 .admin-card-title { font-weight: 500; }
 
 .btn-delete {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   background: rgba(244,71,71,0.1);
   border: 1px solid rgba(244,71,71,0.3);
   color: var(--red);
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-family: inherit;
   transition: all 0.15s;
 }
@@ -394,20 +397,20 @@ body {
 .btn-delete:hover { background: rgba(244,71,71,0.25); border-color: var(--red); }
 .btn-delete:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.admin-card-meta { display: flex; align-items: center; gap: 14px; padding: 8px 14px; background: var(--bg-3); }
+.admin-card-meta { display: flex; align-items: center; gap: 16px; padding: 10px 18px; background: var(--bg-3); flex-wrap: wrap; }
 
-.admin-code-preview { padding: 12px 14px; margin: 0; background: var(--bg-1); max-height: 150px; overflow: auto; }
+.admin-code-preview { padding: 16px 18px; margin: 0; background: var(--bg-1); max-height: 200px; overflow: auto; }
 .admin-code-preview code {
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 22px;
   color: var(--c-2);
   white-space: pre;
 }
 
-.codes-list { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.codes-list { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 20px; }
 
-.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
 
 .code-card-topbar {
   display: flex;
@@ -415,39 +418,39 @@ body {
   justify-content: space-between;
   background: var(--bg-3);
   border-bottom: 1px solid var(--border);
-  padding: 6px 12px;
-  min-height: 38px;
+  padding: 10px 16px;
+  min-height: 44px;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .code-card-tab {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
+  gap: 8px;
+  font-size: 0.9rem;
   color: var(--c-1);
   background: var(--bg-1);
-  height: 28px;
-  padding: 0 12px;
+  height: 32px;
+  padding: 0 14px;
   border-top: 2px solid var(--blue);
 }
 
-.code-card-meta { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.code-card-meta { display: flex; align-items: center; gap: 14px; margin-left: auto; flex-wrap: wrap; }
 
-.meta-item { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--c-3); }
+.meta-item { display: inline-flex; align-items: center; gap: 5px; font-size: 0.82rem; color: var(--c-3); }
 
 .btn-copy {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: 1px solid transparent;
   color: var(--c-2);
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-family: inherit;
   transition: all 0.15s;
 }
@@ -455,12 +458,12 @@ body {
 .btn-copy:hover { background: var(--bg-hover); color: var(--c-1); border-color: var(--border); }
 .btn-copy.copied { color: var(--green); border-color: var(--green); background: rgba(78,201,176,0.1); }
 
-.code-editor-view { display: flex; overflow: auto; max-height: 400px; }
+.code-editor-view { display: flex; overflow: auto; max-height: 450px; }
 
 .code-line-numbers {
   background: var(--bg-2);
   border-right: 1px solid var(--border);
-  padding: 12px 0;
+  padding: 14px 0;
   user-select: none;
   flex-shrink: 0;
   text-align: right;
@@ -473,7 +476,7 @@ body {
 
 .code-content {
   flex: 1;
-  padding: 12px 16px;
+  padding: 14px 18px;
   margin: 0;
   background: var(--bg-1);
   overflow: visible;
@@ -482,7 +485,7 @@ body {
 
 .code-content code {
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 22px;
   color: var(--white);
   white-space: pre;
@@ -492,11 +495,11 @@ body {
 .lang-badge {
   background: var(--py-blue);
   color: white;
-  font-size: 0.65rem;
-  padding: 1px 6px;
-  border-radius: 3px;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 600;
-  margin-left: 6px;
+  margin-left: 8px;
 }
 
 .py-keyword { color: var(--purple); }
@@ -512,3 +515,41 @@ body {
 .py-identifier { color: var(--cyan); }
 .py-attribute { color: var(--cyan); }
 .py-dunder { color: var(--green); font-style: italic; }
+
+@media (max-width: 600px) {
+  .home-card { padding: 50px 30px; }
+  .home-card h1 { font-size: 1.8rem; }
+  .home-card p { font-size: 1rem; margin-bottom: 36px; }
+  .btn { padding: 14px 24px; font-size: 1rem; }
+  .home-logo { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 24px; }
+  .home-logo svg { width: 36px; height: 36px; }
+
+  .view-header, .admin-header { padding: 0 12px; gap: 8px; }
+  .view-title, .admin-title { font-size: 0.9rem; }
+  .btn-refresh { padding: 6px 10px; font-size: 0.8rem; }
+  .btn-delete-all span { display: none; }
+
+  .codes-list { padding: 12px; gap: 14px; }
+  .code-card-topbar { padding: 8px 12px; min-height: 40px; }
+  .code-card-tab { font-size: 0.8rem; height: 28px; padding: 0 10px; }
+  .code-card-meta { gap: 8px; }
+  .meta-item { font-size: 0.75rem; }
+  .btn-copy { padding: 4px 10px; font-size: 0.78rem; }
+  .code-editor-view { max-height: 350px; }
+  .code-content code { font-size: 12px; line-height: 20px; }
+  .line-num { font-size: 12px; }
+
+  .admin-list { padding: 12px; gap: 12px; }
+  .admin-card-top { padding: 10px 14px; }
+  .admin-card-info { font-size: 0.9rem; }
+  .admin-card-meta { padding: 8px 14px; gap: 10px; }
+
+  .auth-box { padding: 36px 28px; }
+  .auth-box h2 { font-size: 1.2rem; }
+  .auth-input { padding: 12px 14px; font-size: 0.95rem; }
+  .auth-btn { padding: 12px; font-size: 0.95rem; }
+
+  .editor-topbar { padding: 0 12px; height: 44px; }
+  .editor-tab { font-size: 0.8rem; }
+  .editor-statusbar { font-size: 0.78rem; padding: 0 12px; }
+}
