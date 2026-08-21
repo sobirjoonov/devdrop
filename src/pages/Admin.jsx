@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Trash2, RefreshCw, FileCode2, Shield, Clock, Hash, Lock } from "lucide-react";
 import { supabase } from "../lib/supabase";
+import { highlightPython } from "../lib/highlight";
 
 const PASS = import.meta.env.VITE_ADMIN_PASS;
 
@@ -145,9 +146,18 @@ function Admin() {
                   <span className="meta-item"><Clock size={12} /><span>sana: {sana} vaqt: {vaqt}</span></span>
                   <span className="meta-item"><span>ID: {item.id}</span></span>
                 </div>
-                <pre className="admin-code-preview">
-                  <code>{item.code.slice(0, 300)}{item.code.length > 300 ? "..." : ""}</code>
-                </pre>
+                <div className="admin-code-preview">
+                  <div className="code-editor-view">
+                    <div className="code-line-numbers">
+                      {item.code.split("\n").map((_, i) => (
+                        <div key={i} className="line-num">{i + 1}</div>
+                      ))}
+                    </div>
+                    <pre className="code-content">
+                      <code dangerouslySetInnerHTML={{ __html: highlightPython(item.code).join("\n") }} />
+                    </pre>
+                  </div>
+                </div>
               </div>
             );
           })}
