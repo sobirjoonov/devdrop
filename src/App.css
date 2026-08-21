@@ -240,7 +240,14 @@ body {
 
 .editor-statusbar span { opacity: 0.9; }
 
-.view-page, .admin-page { width: 100%; height: 100vh; display: flex; flex-direction: column; background: var(--bg-1); }
+.view-page, .admin-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-1);
+  overflow: hidden;
+}
 
 .view-header, .admin-header {
   display: flex;
@@ -362,9 +369,23 @@ body {
 .btn-delete-all:hover { background: rgba(244,71,71,0.3); }
 .btn-delete-all:disabled { opacity: 0.4; cursor: not-allowed; }
 
-.admin-list { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.admin-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-.admin-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.admin-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 
 .admin-card-top {
   display: flex;
@@ -408,9 +429,23 @@ body {
   white-space: pre;
 }
 
-.codes-list { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 32px; }
+.codes-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.code-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 
 .code-card-topbar {
   display: flex;
@@ -471,9 +506,6 @@ body {
   user-select: none;
   flex-shrink: 0;
   text-align: right;
-  position: sticky;
-  left: 0;
-  z-index: 1;
 }
 
 .code-line-numbers .line-num { padding-right: 12px; padding-left: 12px; }
@@ -483,8 +515,8 @@ body {
   padding: 14px 18px;
   margin: 0;
   background: var(--bg-1);
-  overflow: visible;
   min-width: 0;
+  overflow: visible;
 }
 
 .code-content code {
@@ -539,7 +571,7 @@ body {
   .code-card-meta { gap: 10px; }
   .meta-item { font-size: 0.78rem; }
   .btn-copy { padding: 5px 12px; font-size: 0.82rem; }
-  .code-editor-view { max-height: 350px; }
+  .code-editor-view { max-height: 400px; }
   .code-content code { font-size: 13px; line-height: 20px; }
   .line-num { font-size: 13px; }
 
