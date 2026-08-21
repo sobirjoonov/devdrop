@@ -399,7 +399,7 @@ body {
 
 .admin-card-meta { display: flex; align-items: center; gap: 16px; padding: 10px 18px; background: var(--bg-3); flex-wrap: wrap; }
 
-.admin-code-preview { padding: 16px 18px; margin: 0; background: var(--bg-1); max-height: 200px; overflow: auto; }
+.admin-code-preview { padding: 16px 18px; margin: 0; background: var(--bg-1); max-height: 300px; overflow: auto; }
 .admin-code-preview code {
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
   font-size: 13px;
