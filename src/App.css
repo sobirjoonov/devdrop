@@ -408,9 +408,9 @@ body {
   white-space: pre;
 }
 
-.codes-list { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.codes-list { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 28px; }
 
-.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
 
 .code-card-topbar {
   display: flex;
@@ -458,7 +458,7 @@ body {
 .btn-copy:hover { background: var(--bg-hover); color: var(--c-1); border-color: var(--border); }
 .btn-copy.copied { color: var(--green); border-color: var(--green); background: rgba(78,201,176,0.1); }
 
-.code-editor-view { display: flex; overflow: auto; max-height: 450px; }
+.code-editor-view { display: flex; overflow: auto; max-height: none; }
 
 .code-line-numbers {
   background: var(--bg-2);
@@ -535,7 +535,7 @@ body {
   .code-card-meta { gap: 8px; }
   .meta-item { font-size: 0.75rem; }
   .btn-copy { padding: 4px 10px; font-size: 0.78rem; }
-  .code-editor-view { max-height: 350px; }
+  .code-editor-view { max-height: none; }
   .code-content code { font-size: 12px; line-height: 20px; }
   .line-num { font-size: 12px; }
 
