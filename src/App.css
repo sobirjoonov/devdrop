@@ -408,9 +408,9 @@ body {
   white-space: pre;
 }
 
-.codes-list { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 28px; }
+.codes-list { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 32px; }
 
-.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.code-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
 
 .code-card-topbar {
   display: flex;
@@ -418,8 +418,8 @@ body {
   justify-content: space-between;
   background: var(--bg-3);
   border-bottom: 1px solid var(--border);
-  padding: 10px 16px;
-  min-height: 44px;
+  padding: 12px 18px;
+  min-height: 48px;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -428,17 +428,17 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--c-1);
   background: var(--bg-1);
-  height: 32px;
-  padding: 0 14px;
+  height: 34px;
+  padding: 0 16px;
   border-top: 2px solid var(--blue);
 }
 
-.code-card-meta { display: flex; align-items: center; gap: 14px; margin-left: auto; flex-wrap: wrap; }
+.code-card-meta { display: flex; align-items: center; gap: 16px; margin-left: auto; flex-wrap: wrap; }
 
-.meta-item { display: inline-flex; align-items: center; gap: 5px; font-size: 0.82rem; color: var(--c-3); }
+.meta-item { display: inline-flex; align-items: center; gap: 5px; font-size: 0.85rem; color: var(--c-3); }
 
 .btn-copy {
   display: inline-flex;
@@ -450,7 +450,7 @@ body {
   padding: 6px 14px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-family: inherit;
   transition: all 0.15s;
 }
@@ -458,7 +458,11 @@ body {
 .btn-copy:hover { background: var(--bg-hover); color: var(--c-1); border-color: var(--border); }
 .btn-copy.copied { color: var(--green); border-color: var(--green); background: rgba(78,201,176,0.1); }
 
-.code-editor-view { display: flex; overflow: auto; max-height: none; }
+.code-editor-view {
+  display: flex;
+  overflow: auto;
+  max-height: 500px;
+}
 
 .code-line-numbers {
   background: var(--bg-2);
@@ -529,15 +533,15 @@ body {
   .btn-refresh { padding: 6px 10px; font-size: 0.8rem; }
   .btn-delete-all span { display: none; }
 
-  .codes-list { padding: 12px; gap: 14px; }
-  .code-card-topbar { padding: 8px 12px; min-height: 40px; }
-  .code-card-tab { font-size: 0.8rem; height: 28px; padding: 0 10px; }
-  .code-card-meta { gap: 8px; }
-  .meta-item { font-size: 0.75rem; }
-  .btn-copy { padding: 4px 10px; font-size: 0.78rem; }
-  .code-editor-view { max-height: none; }
-  .code-content code { font-size: 12px; line-height: 20px; }
-  .line-num { font-size: 12px; }
+  .codes-list { padding: 14px; gap: 18px; }
+  .code-card-topbar { padding: 10px 14px; min-height: 42px; }
+  .code-card-tab { font-size: 0.85rem; height: 30px; padding: 0 12px; }
+  .code-card-meta { gap: 10px; }
+  .meta-item { font-size: 0.78rem; }
+  .btn-copy { padding: 5px 12px; font-size: 0.82rem; }
+  .code-editor-view { max-height: 350px; }
+  .code-content code { font-size: 13px; line-height: 20px; }
+  .line-num { font-size: 13px; }
 
   .admin-list { padding: 12px; gap: 12px; }
   .admin-card-top { padding: 10px 14px; }
